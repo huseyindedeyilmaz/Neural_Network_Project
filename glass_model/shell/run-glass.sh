@@ -4,7 +4,7 @@ classes=('wood')
 flags=($(for class in "${classes[@]}"; do echo '-d '"${class}"; done))
 
 cd ..
-python neural_network/glass_model/main.py \
+python Neural_Network_Project/glass_model/main.py \
     --gpu 0 \
     --seed 0 \
     --test ckpt \

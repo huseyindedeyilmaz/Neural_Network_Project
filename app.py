@@ -26,7 +26,7 @@ os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
-glass_path = "./models/glass/ckpt_best_5.pth"
+glass_path = r"models\glass\ckpt_best_5.pth"
 
 checkpoint = torch.load(glass_path, weights_only=True)
 backbone = backbones.load("wideresnet50")
@@ -61,7 +61,7 @@ transform_img = transforms.Compose([
 
 pathlib.PosixPath = pathlib.WindowsPath
 
-padim_path = "./models/padim/model.pt"
+padim_path = r"models\padim\model.pt"
 
 padim = TorchInferencer(
     path=padim_path,
@@ -69,7 +69,7 @@ padim = TorchInferencer(
 )
 
 # EfficientAD
-config = Config(pretrain_model_path="./models/efficientad/model/model.pth",model_name="model")
+config = Config(pretrain_model_path=r"models\efficientad\model\model.pth",model_name="model")
 
 efficientad = EfficientAD(config=config)
 efficientad.initialize_predict()

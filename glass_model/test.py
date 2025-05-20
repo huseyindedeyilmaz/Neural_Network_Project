@@ -124,5 +124,5 @@ f1 = f1_score(y_true, y_pred)
 print("F1 Score: ", f1)
 
 
-iou = evaluate_iou(model, "./wood_dataset/wood/test/defect", "./wood_dataset/wood/ground_truth/defect",threshold)
+iou = evaluate_iou(model, r"wood_dataset\wood\test\defect", r"wood_dataset\wood\ground_truth\defect",threshold)
 print("iou :", iou)
